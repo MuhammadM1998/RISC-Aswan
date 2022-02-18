@@ -6,9 +6,9 @@ My graduation project landing page, a RISC-V RV32I core with pipelining and haza
 
 ### 🔗 Links
 
--   [Live Demo on Netlify](https://risc-aswan.netlify.app/)
+-   [Live Site](https://risc-aswan-2022.web.app/)
 -   [Source Repo on Github](https://github.com/MuhammadM1998/RISC-Aswan)
--   [Project Files on Github](https://github.com/MuhammadM1998/RISC-Aswan/tree/main/RA-RV32IPPHU)
+-   [Project Files on Github](https://github.com/MuhammadM1998/RISC-Aswan/tree/main/src/RA-RV32IPPHU)
 
 ### ‍💻 Project Stack
 
