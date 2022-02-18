@@ -12,10 +12,7 @@
     "source": "./src/index.html",
     "scripts": {
         "dev": "parcel --https --open firefox",
-        "build": "npm run buildRelative && npm run updatePaths",
-        "buildRelative": "parcel build --no-source-maps --public-url .",
-        "updatePaths": "sed -i '' 's/././g' dist/index.html"
-        
+        "build": "parcel build --no-source-maps --public-url ."
     },
     "devDependencies": {
         "autoprefixer": "^10.4.2",
