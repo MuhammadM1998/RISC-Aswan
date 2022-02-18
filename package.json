@@ -14,7 +14,8 @@
         "dev": "parcel --https --open firefox",
         "build": "npm run buildRelative && npm run updatePaths",
         "buildRelative": "parcel build --no-source-maps --public-url .",
-        "updatePaths": "(Get-Content -Raw public/index.html) -replace 'src=\"', 'src=\"./' | Set-Content -NoNewLine public/index.html"
+        "updatePaths": "sed -i '' 's/././g' dist/index.html"
+        
     },
     "devDependencies": {
         "autoprefixer": "^10.4.2",
