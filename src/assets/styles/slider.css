@@ -1,0 +1,53 @@
+.slider {
+	background: transparent;
+	height: 100px;
+	margin: 2rem 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.slider::before,
+.slider::after {
+	background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+	content: '';
+	height: 100px;
+	position: absolute;
+	width: 200px;
+	z-index: 2;
+}
+
+.slider::after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+}
+
+.slider::before {
+	left: 0;
+	top: 0;
+}
+
+.slider .slide {
+	height: 100px;
+	width: 250px;
+}
+
+img {
+	padding: 0 2rem;
+}
+
+.slider .slide-track {
+	animation: scroll 10s linear infinite;
+	display: flex;
+	width: calc(250px * 24);
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-250px * 12));
+	}
+}

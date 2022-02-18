@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A landing page of Aswan Faculty of Engineering 2021 graduation project, RISC-V RV32I core with pipelining and hazard unit on FPGA boards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link href="./assets/styles/index.css" rel="stylesheet">
+    <script type="module" src="./assets/scripts/index.js" defer></script>
+
+    <title>RISC-Aswan</title>
+</head>
+
+<body class="transition-colors font-sora dark:bg-bodyDark dark:text-white">
+    <!-- Hero -->
+    <section id="home" class="relative flex flex-col min-h-screen bg-cover shadow-hero bg-hero">
+        <!-- Header -->
+        <header id="header" class="">
+            <div class="container flex items-center justify-between gap-6">
+                <!-- Logo -->
+                <a href="#" aria-label="Website Logo">
+                    <img src="./assets/images/shared/Logo.svg" alt="Logo">
+                </a>
+
+                <!-- Nav -->
+                <nav class="flex items-center gap-6 text-white">
+                    <!-- Hamburger Menu -->
+                    <tilt-burger label="Hamburger Menu" id="hamburger" class="lg:hidden" size="lg">
+                    </tilt-burger>
+
+                    <ul id="nav-menu" class="fixed flex-col lg:static lg:flex-row">
+                        <li>
+                            <a href="#home" class="transition-colors nav-link hover:text-primary">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#about" class="transition-colors nav-link hover:text-primary">About RISC-V</a>
+                        </li>
+
+                        <li>
+                            <a href="#partners" class="transition-colors nav-link hover:text-primary">Partners</a>
+                        </li>
+
+                        <li>
+                            <a href="#team" class="transition-colors nav-link hover:text-primary">Team</a>
+                        </li>
+
+                        <li>
+                            <a href="#our-project" class="transition-colors nav-link hover:text-primary">Our
+                                    Project</a>
+                        </li>
+
+                        <li>
+                            <a href="#learn-more" class="transition-colors nav-link hover:text-primary">Learn
+                                    More</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="transition-colors nav-link hover:text-primary">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Theme Toggle -->
+                    <div class="flex">
+                        <input id="toggle" class="toggle" aria-label="switch-theme" type="checkbox">
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Intro -->
+        <section class="grid content-center flex-1 text-center text-white ">
+            <div class="container flex flex-col gap-6 ">
+                <h1 class="main-heading">
+                    Welcome to the Open era of computing!
+                </h1>
+
+                <p class="text-sm font-semibold lg:text-base">RISC-V is a free and open RISC ISA, driven through open collaboration.
+                </p>
+
+                <a class="transition-shadow cta bg-[#EB7100]" href="https://github.com/MuhammadM1998/RISC-Aswan" target="_blank" rel="noopener" aria-label="Download Repo">
+                    <p class="text-lg font-bold">Download Repo</p>
+
+                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="19" height="18" xmlns:v="https://vecta.io/nano" aria-label="GitHub Account">
+                            <g clip-path="url(#A)">
+                                <path fill-rule="evenodd"
+                                    d="M9.5 0a9 9 0 0 0-9 9c0 3.983 2.576 7.346 6.154 8.539.45.079.619-.191.619-.427l-.011-1.676c-2.261.416-2.846-.551-3.026-1.058-.101-.259-.54-1.057-.923-1.271-.315-.169-.765-.585-.011-.596.709-.011 1.215.652 1.384.922.81 1.361 2.104.979 2.621.743.079-.585.315-.979.574-1.204-2.002-.225-4.095-1.001-4.095-4.444 0-.979.349-1.789.922-2.419-.09-.225-.405-1.147.09-2.385 0 0 .754-.236 2.475.923a8.35 8.35 0 0 1 2.25-.304 8.35 8.35 0 0 1 2.25.304c1.721-1.17 2.475-.923 2.475-.923.495 1.237.18 2.16.09 2.385a3.48 3.48 0 0 1 .922 2.419c0 3.454-2.104 4.219-4.106 4.444.326.281.608.821.608 1.665l-.011 2.475c0 .236.169.517.619.427 1.787-.603 3.339-1.751 4.439-3.283S18.5 10.886 18.5 9a9 9 0 0 0-9-9z" />
+                            </g>
+                            <defs>
+                                <clipPath id="A">
+                                    <path transform="translate(.5)" d="M0 0h18v18H0z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                </a>
+            </div>
+        </section>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="overflow-hidden section section--shadow before:-scale-x-100 before:right-0 bg-light-blue dark:bg-transparent">
+        <div class="container relative flex flex-col gap-4">
+            <h2 class="section-heading">
+                What’s all the fuss about?
+            </h2>
+
+            <p>
+                The RISC-V ISA delivers a new level of free, extensible software and hardware freedom on architecture, paving the way for the next 50 years of computing design and innovation.
+            </p>
+
+            <!-- Features -->
+            <div class="grid grid-cols-2 gap-8 lg:grid-cols-3 xl:grid-cols-6">
+                <!-- Feature Box -->
+                <div class="feature-box">
+                    <img class="max-w-[64px] mx-auto" src="./assets/images/features/Free.svg" alt="Free">
+
+                    <p class="font-semibold">Free</p>
+
+                    <p>As it is open source, there is no need to pay for IP.</p>
+                </div>
+
+                <!-- Feature Box -->
+                <div class="feature-box">
+                    <img class="max-w-[64px] mx-auto" src=" ./assets/images/features/Simple.svg " alt="Simple">
+
+                    <p class="font-semibold">Simple</p>
+
+                    <p>RISC-V is smaller than many commercial ISAs.</p>
+                </div>
+
+                <!-- Feature Box -->
+                <div class="feature-box">
+                    <img class="max-w-[64px] mx-auto" src="./assets/images/features/Stable.svg" alt="Stable">
+
+                    <p class="font-semibold">Stable</p>
+
+                    <p>Base & First standard extensions are fixed, no updates needed.</p>
+                </div>
+
+                <!-- Feature Box -->
+                <div class="feature-box">
+                    <img class="max-w-[64px] mx-auto" src="./assets/images/features/Modular.svg " alt="Modular">
+
+                    <p class="font-semibold">Modular</p>
+
+                    <p>RISC-V has a smaller standard base ISA.</p>
+                </div>
+
+                <!-- Feature Box -->
+                <div class="feature-box">
+                    <img class="max-w-[64px] mx-auto" src="./assets/images/features/Low-Power.svg" alt="Low-Power">
+
+                    <p class="font-semibold">Low Power</p>
+
+                    <p>RISC-V ISA does not require any fees.</p>
+                </div>
+
+                <!-- Feature Box -->
+                <div class="feature-box">
+                    <img class="max-w-[64px] mx-auto" src="./assets/images/features/Extendible.svg" alt="Extendible">
+
+                    <p class="font-semibold">Extensible</p>
+
+                    <p>More functionality can be added as extensions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eveyone Loves RISC-V -->
+    <section id="partners" class="section dark:bg-violet">
+        <div class="container flex flex-col gap-4">
+            <h2 class="section-heading">
+                Everyone Loves RISC-V
+            </h2>
+
+            <p>
+                Nearly 300 of the biggest companies in the world are members of the RISC-V International orginaztion
+            </p>
+        </div>
+
+        <div class="slider">
+            <div class="slider__track">
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Alibaba-Cloud.svg" loading="lazy" alt="Alibaba Cloud" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Analog-Devices.svg" loading="lazy" alt="Analog Devices" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Arduino.svg" loading="lazy" alt="Arduio" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Cadence.svg" loading="lazy" alt="Cadence" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Google.svg" loading="lazy" alt="Google" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Huawei.svg" loading="lazy" alt="Huawei" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/IBM.svg" loading="lazy" alt="IBM" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/nVIDIA.svg" loading="lazy" alt="nVIDIA" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Samsung.svg" loading="lazy" alt="Samsung" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Siemens.svg" loading="lazy" alt="Siemens" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Western-Digital.svg" loading="lazy" alt="Western Digital" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Xilinix.svg" loading="lazy" alt="Xilinix" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Alibaba-Cloud.svg" loading="lazy" alt="Alibaba Cloud" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Analog-Devices.svg" loading="lazy" alt="Analog Devices" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Arduino.svg" loading="lazy" alt="Arduio" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Cadence.svg" loading="lazy" alt="Cadence" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Google.svg" loading="lazy" alt="Google" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Huawei.svg" loading="lazy" alt="Huawei" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/IBM.svg" loading="lazy" alt="IBM" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/nVIDIA.svg" loading="lazy" alt="nVIDIA" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Samsung.svg" loading="lazy" alt="Samsung" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Siemens.svg" loading="lazy" alt="Siemens" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Western-Digital.svg" loading="lazy" alt="Western Digital" height="100" width="250">
+                </div>
+
+                <div class="slider__slide">
+                    <img class="slider__img" src="./assets/images/partners/Xilinix.svg" loading="lazy" alt="Xilinix" height="100" width="250">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="text-white bg-center bg-cover section bg-team">
+        <div class="container flex flex-col gap-4">
+            <h2 class="section-heading">
+                Meet the team!
+            </h2>
+
+            <p>
+                We’re 6 students at the Faculty of Engineering of Aswan University. Each one of us is excited about the Digital IC Design field. We started our journey with designing a Pipelined RV32I Core with a Hazard Unit and implementing it on two different FPGA
+                boards.
+            </p>
+
+            <!-- Team Members Wrapper -->
+            <div class="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-2 lg:max-w-2xl">
+                <!-- Member box -->
+                <div class="flex items-center justify-between gap-4">
+                    <img class="w-16 h-16 rounded-full" src="./assets/images/team/Muhammad-Mahmoud.webp" alt="Muhammad Mahmoud">
+
+                    <p>Muhammad Mahmoud</p>
+
+                    <a href="https://www.linkedin.com/in/muhammadm1998/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+                                <path class="transition-colors fill-white group-hover:fill-primary"
+                                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889  C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056  H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806  c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1  s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73  c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079  c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426  c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472  L341.91,330.654L341.91,330.654z" />
+                            </svg>
+                    </a>
+                </div>
+
+                <!-- Member box -->
+                <div class="flex items-center justify-between gap-4">
+                    <img class="w-16 h-16 rounded-full" src="./assets/images/team/Waseem-Emile.webp" alt="Waseem Emile">
+
+                    <p>Waseem Emile</p>
+
+                    <a href="https://www.linkedin.com/in/waseem-emile-729296129/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+                                <path class="transition-colors fill-white group-hover:fill-primary"
+                                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889  C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056  H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806  c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1  s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73  c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079  c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426  c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472  L341.91,330.654L341.91,330.654z" />
+                            </svg>
+                    </a>
+                </div>
+
+                <!-- Member box -->
+                <div class="flex items-center justify-between gap-4">
+                    <img class="w-16 h-16 rounded-full" src="./assets/images/team/Mustafa-Amin.webp" alt="Mustafa Amin">
+
+                    <p>Mustafa Amin</p>
+
+                    <a href="https://www.linkedin.com/in/mustafa-amin-9413011ab/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+                                <path class="transition-colors fill-white group-hover:fill-primary"
+                                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889  C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056  H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806  c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1  s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73  c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079  c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426  c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472  L341.91,330.654L341.91,330.654z" />
+                            </svg>
+                    </a>
+                </div>
+
+                <!-- Member box -->
+                <div class="flex items-center justify-between gap-4">
+                    <img class="w-16 h-16 rounded-full" src="./assets/images/team/Amir-Mahdy.webp" alt="Amir Mahdy">
+
+                    <p>Amir Mahdy</p>
+
+                    <a href="https://www.linkedin.com/in/amir-mahdy-null-a682591a1/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+                                <path class="transition-colors fill-white group-hover:fill-primary"
+                                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889  C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056  H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806  c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1  s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73  c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079  c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426  c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472  L341.91,330.654L341.91,330.654z" />
+                            </svg>
+                    </a>
+                </div>
+
+                <!-- Member box -->
+                <div class="flex items-center justify-between gap-4">
+                    <img class="w-16 h-16 rounded-full" src="./assets/images/team/Ahmed-Hars.webp" alt="Ahmed Hars">
+
+                    <p>Ahmed Hars</p>
+
+                    <a href="https://www.linkedin.com/in/ahmed-abd-elhares/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+                                <path class="transition-colors fill-white group-hover:fill-primary"
+                                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889  C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056  H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806  c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1  s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73  c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079  c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426  c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472  L341.91,330.654L341.91,330.654z" />
+                            </svg>
+                    </a>
+                </div>
+
+                <!-- Member box -->
+                <div class="flex items-center justify-between gap-4">
+                    <img class="w-16 h-16 rounded-full" src="./assets/images/team/Essam-Kamaly.webp" alt="Essam Kamaly">
+
+                    <p>Essam Kamaly</p>
+
+                    <a href="https://www.linkedin.com/in/engessama/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                        <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+                                <path class="transition-colors fill-white group-hover:fill-primary"
+                                    d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889  C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056  H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806  c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1  s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73  c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079  c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426  c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472  L341.91,330.654L341.91,330.654z" />
+                            </svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Project -->
+    <section id="our-project" class="overflow-hidden section section--shadow before:left-0 bg-light-blue dark:bg-transparent">
+        <div class="container relative flex flex-col gap-6">
+            <h2 class="section-heading">
+                RISC-Aswan Project
+            </h2>
+
+            <p>
+                We Implemented and Deployed a Pipelined RISC-V RV32I Core on FPGA boards.
+            </p>
+
+            <!-- Project Steps Wrapper -->
+            <div class="grid grid-cols-1 gap-6 text-left lg:grid-cols-3 md:grid-cols-2">
+                <!-- Step Box -->
+                <div class="project-step">
+                    <div class="flex items-center justify-between gap-4">
+                        <img src="./assets/images/project/Single-Cycle.svg" alt="Single Cycle">
+                        <p class="font-bold text-primary">01</p>
+                    </div>
+
+                    <p class="font-semibold">Single-Cycle RV32I Core</p>
+
+                    <p class="text-sm">Implemented a single-cycle RISC-V core based on RV32I ISA.</p>
+                </div>
+
+                <!-- Step Box -->
+                <div class="project-step">
+                    <div class="flex items-center justify-between gap-4">
+                        <img src="./assets/images/project/Pipelining.svg" alt="Pipelining">
+                        <p class="font-bold text-primary">02</p>
+                    </div>
+
+                    <p class="font-semibold">Pipelining</p>
+
+                    <p class="text-sm">Increased throughput by implementing pipelined stages.</p>
+                </div>
+
+                <!-- Step Box -->
+                <div class="project-step">
+                    <div class="flex items-center justify-between gap-4">
+                        <img src="./assets/images/project/Hazard-Unit.svg" alt="Hazard Unit">
+                        <p class="font-bold text-primary">03</p>
+                    </div>
+
+                    <p class="font-semibold">Hazard Unit</p>
+
+                    <p class="text-sm">Solved pipelining problems by implementing a Hazard Unit.</p>
+                </div>
+
+                <!-- Step Box -->
+                <div class="project-step">
+                    <div class="flex items-center justify-between gap-4">
+                        <img src="./assets/images/project/Testbench.svg" alt="Testbench">
+                        <p class="font-bold text-primary">04</p>
+                    </div>
+
+                    <p class="font-semibold">Testbench</p>
+
+                    <p class="text-sm">Verified the functionality of each block in the design.</p>
+                </div>
+
+                <!-- Step Box -->
+                <div class="project-step">
+                    <div class="flex items-center justify-between gap-4">
+                        <img src="./assets/images/project/Synthesis.svg" alt="Synthesis">
+                        <p class="font-bold text-primary">05</p>
+                    </div>
+
+                    <p class="font-semibold">Synthesis</p>
+
+                    <p class="text-sm">Verified RTL Schematic, Synthesis and Implementation.</p>
+                </div>
+
+                <!-- Step Box -->
+                <div class="project-step">
+                    <div class="flex items-center justify-between gap-4">
+                        <img src="./assets/images/project/Deploying.svg" alt="Pipelining">
+                        <p class="font-bold text-primary">06</p>
+                    </div>
+
+                    <p class="font-semibold">Deploying on FPGA</p>
+
+                    <p class="text-sm">Deployed the design to XC7A100T [ISE] and Basys-3 [Vivado] FPGA boards.</p>
+                </div>
+
+                <!-- Step Box -->
+                <div class="project-step">
+                    <div class="flex items-center justify-between gap-4">
+                        <img src="./assets/images/project/Verification.svg" alt="Verification">
+                        <p class="font-bold text-primary">07</p>
+                    </div>
+
+                    <p class="font-semibold">Verification</p>
+
+                    <p class="text-sm">Verified boards functionality using test vectors and Vivado ILA.</p>
+                </div>
+            </div>
+
+            <a class="transition-shadow cta" href="https://github.com/MuhammadM1998/RISC-Aswan" target="_blank" rel="noopener" aria-label="Download Repo">
+                <p>Download Repo</p>
+
+                <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="19" height="18" xmlns:v="https://vecta.io/nano" aria-label="Project Repo on GitHub">
+                        <g clip-path="url(#A)">
+                            <path fill-rule="evenodd"
+                                d="M9.5 0a9 9 0 0 0-9 9c0 3.983 2.576 7.346 6.154 8.539.45.079.619-.191.619-.427l-.011-1.676c-2.261.416-2.846-.551-3.026-1.058-.101-.259-.54-1.057-.923-1.271-.315-.169-.765-.585-.011-.596.709-.011 1.215.652 1.384.922.81 1.361 2.104.979 2.621.743.079-.585.315-.979.574-1.204-2.002-.225-4.095-1.001-4.095-4.444 0-.979.349-1.789.922-2.419-.09-.225-.405-1.147.09-2.385 0 0 .754-.236 2.475.923a8.35 8.35 0 0 1 2.25-.304 8.35 8.35 0 0 1 2.25.304c1.721-1.17 2.475-.923 2.475-.923.495 1.237.18 2.16.09 2.385a3.48 3.48 0 0 1 .922 2.419c0 3.454-2.104 4.219-4.106 4.444.326.281.608.821.608 1.665l-.011 2.475c0 .236.169.517.619.427 1.787-.603 3.339-1.751 4.439-3.283S18.5 10.886 18.5 9a9 9 0 0 0-9-9z" />
+                        </g>
+                        <defs>
+                            <clipPath id="A">
+                                <path transform="translate(.5)" d="M0 0h18v18H0z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Learn More -->
+    <section id="learn-more" class="section">
+        <div class="container flex flex-col gap-4">
+            <h2 class="section-heading">
+                More about RISC-V
+            </h2>
+
+            <p>
+                Inspired enough to deep dive even more? Check out these resources.
+            </p>
+
+            <!-- Resources Wrapper -->
+            <div class="flex flex-col justify-center gap-4 lg:flex-row">
+                <!-- Video -->
+                <div class="w-full lg:w-1/2">
+                    <p class="font-semibold">Watch a video by the CEO of RISC-V-International</p>
+
+                    <div id="main">
+                        <div class="youtube-player" data-id="Hl3nXexMXS0"></div>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="flex flex-col">
+                    <p class="font-semibold">Visit the oficial sites to learn more</p>
+
+                    <div class="grid grid-cols-1 gap-4 mt-6 lg:my-auto">
+                        <a href="https://riscv.org/" class="learn-more-link" target="_blank" rel="noopener" aria-label="RISC-V International Website">
+                            <img class="w-20 h-20" src="./assets/images/learn-more/RISC-V-International.webp" alt="RISC-V International">
+
+                            <p class="flex-1 font-semibold">RISC-V International</p>
+                        </a>
+
+                        <a href="https://www.sifive.com/" class="learn-more-link" target="_blank" rel="noopener" aria-label="Si-Five Website">
+                            <img class="w-20 h-20" src="./assets/images/learn-more/SiFive.webp" alt="RISC-V International">
+
+                            <p class="flex-1 font-semibold">Si-Five</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-light-blue dark:bg-transparent">
+        <div class="container flex flex-col gap-4 ">
+            <h2 class="section-heading">
+                Get in touch
+            </h2>
+
+            <p>
+                We’d love to get a feedback from you
+            </p>
+
+            <!-- Form and Illustration Wrapper -->
+            <div class="flex flex-col gap-6 py-2 md:flex-row-reverse md:items-center">
+                <div class="w-32 mx-auto md:w-96">
+                    <img id="mailbox" src="./assets/images/contact/Mailbox-Illustration.svg" alt="Send us a Message!">
+                    <img id="message-sent" class="hidden" src="./assets/images/contact/Mail-Sent.svg" alt="Message Sent!">
+                    <img id="message-error" class="hidden" src="./assets/images/contact/Mail-Error.svg" alt="Message Error!">
+                </div>
+
+
+                <form id="contactForm" action="" class="flex flex-col gap-10 md:basis-1/2">
+                    <div class="relative">
+                        <input class="form-input peer" id="first-name" name="first-name" type="text" form="contactForm" placeholder="First Name">
+
+                        <label for="first-name" class="form-label ">First Name</label>
+
+                        <p id="first-name-required" class="text-xs text-left text-black/60 dark:text-gray">required
+                        </p>
+                        <p id="first-name-invalid" class="hidden text-xs text-left input--invalid">First Name must be letters with hyphens (-) or apostrophe (') inbetween only.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <input class="form-input peer" id="last-name" name="last-name" type="text" form="contactForm" placeholder="Last Name">
+
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <p id="last-name-required" class="text-xs text-left text-black/60 dark:text-gray">required
+                        </p>
+                        <p id="last-name-invalid" class="hidden text-xs text-left input--invalid">Last Name must be letters with hyphens (-) or apostrophe (') inbetween only.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <input class="form-input peer" id="email" name="email" type="email" form="contactForm" placeholder="Email Address">
+
+                        <label for="email" class="form-label">Email Address</label>
+                        <p id="email-invalid" class="hidden text-xs text-left input--invalid">Invalid Email. Please type a correct email or leave it empty.</p>
+                    </div>
+
+                    <div class="relative">
+                        <textarea class="form-input peer" id="message" name="Meassage" form="contactForm" cols="30" rows="4" placeholder="Message" class=""></textarea>
+
+                        <label for="message" class="form-label">Message</label>
+                        <p id="message-required" class="text-xs text-left text-black/60 dark:text-gray">required</p>
+                        <p id="message-invalid" class="hidden text-xs text-left input--invalid">Message must be at least 5 characters.</p>
+                    </div>
+
+                    <button id="submit" type="submit" form="contactForm" class="w-1/3 cta">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer class="pb-0 text-white section bg-blue ">
+        <div class="container">
+            <div class="flex flex-col gap-6 lg:flex-row lg:justify-between lg:items-center">
+                <!-- Nav -->
+                <div class="lg:basis-full">
+                    <img class="mx-auto lg:mx-0" src="./assets/images/shared/Logo.svg" alt="Logo">
+
+                    <ul id="nav-menu" class="flex-col mt-6 text-white lg:items-start">
+                        <li>
+                            <a href="#home" class="transition-colors hover:text-primary">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#about" class="transition-colors hover:text-primary">About RISC-V</a>
+                        </li>
+
+                        <li>
+                            <a href="#partners" class="transition-colors hover:text-primary">Partners</a>
+                        </li>
+
+                        <li>
+                            <a href="#team" class="transition-colors hover:text-primary">Team</a>
+                        </li>
+
+                        <li>
+                            <a href="#our-project" class="transition-colors hover:text-primary">Our Project</a>
+                        </li>
+
+                        <li>
+                            <a href="#learn-more" class="transition-colors hover:text-primary">Learn More</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="transition-colors hover:text-primary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- About Me -->
+                <div class="flex flex-col gap-6 text-left lg:basis-full">
+                    <div class="flex items-center gap-6 ">
+                        <img class="w-20 h-20 rounded-full " src="./assets/images/team/Muhammad-Mahmoud.webp" alt="Muhammad Mahmoud">
+
+                        <div>
+                            <p class="mb-2 font-bold">Hi there! I’m Muhammad</p>
+
+                            <p>Some guy with a thing for front-end developing.</p>
+                        </div>
+                    </div>
+
+                    <p class="mt-2">I created this website. If you like it and want to make your own, feel free to contact me.
+                    </p>
+
+                    <ul class="flex items-center justify-center gap-4">
+                        <li>
+                            <a href="mailto:MuhammadM.1097@gmail.com" target="_blank" rel="noopener" rel="noopener" aria-label="Gmail Message">
+                                <svg width="24px" height="24px" viewBox="0 -31.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" class="group">
+                                        <g>
+                                            <path
+                                                d="M58.1818182,192.049515 L58.1818182,93.1404244 L27.5066233,65.0770089 L0,49.5040608 L0,174.59497 C0,184.253152 7.82545455,192.049515 17.4545455,192.049515 L58.1818182,192.049515 Z"
+                                                class="transition-colors fill-white group-hover:fill-[#4285F4]" />
+                                            <path
+                                                d="M197.818182,192.049515 L238.545455,192.049515 C248.203636,192.049515 256,184.224061 256,174.59497 L256,49.5040608 L224.844415,67.3422767 L197.818182,93.1404244 L197.818182,192.049515 Z"
+                                                class="fill-white group-hover:fill-[#34A853]" />
+                                            <polygon class="fill-white group-hover:fill-[#EA4335]"
+                                                points="58.1818182 93.1404244 54.0077618 54.4932827 58.1818182 17.5040608 128 69.8676972 197.818182 17.5040608 202.487488 52.4960089 197.818182 93.1404244 128 145.504061" />
+                                            <path
+                                                d="M197.818182,17.5040608 L197.818182,93.1404244 L256,49.5040608 L256,26.2313335 C256,4.64587897 231.36,-7.65957557 214.109091,5.28587897 L197.818182,17.5040608 Z"
+                                                class="fill-white group-hover:fill-[#FBBC04]" />
+                                            <path
+                                                d="M0,49.5040608 L26.7588051,69.5731646 L58.1818182,93.1404244 L58.1818182,17.5040608 L41.8909091,5.28587897 C24.6109091,-7.65957557 0,4.64587897 0,26.2313335 L0,49.5040608 Z"
+                                                class="fill-white group-hover:fill-[#C5221F]" />
+                                        </g>
+                                    </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/muhammadm1998/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                                <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 382 382" style="enable-background:new 0 0 382 382;" xml:space="preserve">
+                                        <path class="transition-colors fill-white group-hover:fill-[#0077B7]"
+                                            d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889  C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056  H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806  c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1  s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73  c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079  c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426  c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472  L341.91,330.654L341.91,330.654z" />
+                                    </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/MuhammadM1998" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                                <svg class="group" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 291.32 291.32" style="enable-background:new 0 0 291.32 291.32;" xml:space="preserve">
+                                        <g>
+                                            <path class="transition-colors fill-white group-hover:fill-[#2B414D]"
+                                                d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66   s145.66-65.21,145.66-145.66C291.319,65.219,226.1,0,145.66,0z M186.462,256.625c-0.838-11.398-1.775-25.518-1.83-31.235   c-0.364-4.388-0.838-15.549-11.434-22.677c42.068-3.523,62.087-26.774,63.526-57.499c1.202-17.497-5.754-32.883-18.107-45.3   c0.628-13.282-0.401-29.023-1.256-35.941c-9.486-2.731-31.608,8.949-37.79,13.947c-13.037-5.062-44.945-6.837-64.336,0   c-13.747-9.668-29.396-15.64-37.926-13.974c-7.875,17.452-2.813,33.948-1.275,35.914c-10.142,9.268-24.289,20.675-20.447,44.572   c6.163,35.04,30.816,53.94,70.508,58.564c-8.466,1.73-9.896,8.048-10.606,10.788c-26.656,10.997-34.275-6.791-37.644-11.425   c-11.188-13.847-21.23-9.832-21.849-9.614c-0.601,0.218-1.056,1.092-0.992,1.511c0.564,2.986,6.655,6.018,6.955,6.263   c8.257,6.154,11.316,17.27,13.2,20.438c11.844,19.473,39.374,11.398,39.638,11.562c0.018,1.702-0.191,16.032-0.355,27.184   C64.245,245.992,27.311,200.2,27.311,145.66c0-65.365,52.984-118.348,118.348-118.348S264.008,80.295,264.008,145.66   C264.008,196.668,231.69,239.992,186.462,256.625z" />
+                                    </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://dev.to/muhammadm1998" target="_blank" rel="noopener" aria-label="Dev.to Profile">
+                                <svg class="transition-colors fill-white hover:fill-gray" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.826 10.083a.784.784 0 0 0-.468-.175h-.701v4.198h.701a.786.786 0 0 0 .469-.175c.155-.117.233-.292.233-.525v-2.798c.001-.233-.079-.408-.234-.525zM19.236 3H4.764C3.791 3 3.002 3.787 3 4.76v14.48c.002.973.791 1.76 1.764 1.76h14.473c.973 0 1.762-.787 1.764-1.76V4.76A1.765 1.765 0 0 0 19.236 3zM9.195 13.414c0 .755-.466 1.901-1.942 1.898H5.389V8.665h1.903c1.424 0 1.902 1.144 1.903 1.899v2.85zm4.045-3.562H11.1v1.544h1.309v1.188H11.1v1.543h2.142v1.188h-2.498a.813.813 0 0 1-.833-.792V9.497a.813.813 0 0 1 .792-.832h2.539l-.002 1.187zm4.165 4.632c-.531 1.235-1.481.99-1.906 0l-1.548-5.818h1.309l1.193 4.569 1.188-4.569h1.31l-1.546 5.818z" />
+                                    </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="py-2 mt-6 bg-black">All Rights Reserved &copy; Muhammad Mahmoud - 2022</p>
+    </Footer>
+</body>
+
+</html>
