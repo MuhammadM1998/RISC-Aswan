@@ -20,7 +20,6 @@ My graduation project landing page, a RISC-V RV32I core with pipelining and haza
 ![Firebase](https://img.shields.io/static/v1?label=&message=Firebase&color=039be5&style=flat-square&logo=firebase)
 ![Parcel](https://img.shields.io/static/v1?label=&message=Parcel&color=1f3447&style=flat-square&logo=jetpackcompose)
 ![Figma](https://img.shields.io/static/v1?label=&message=Figma&color=000000&style=flat-square&logo=figma)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-%23F05032?style=flat-square&logo=git&logoColor=%23ffffff)
 ![GitHub](https://img.shields.io/badge/-Github-181717?style=flat-square&logo=GitHub&logoColor=white)
 ![npm](https://img.shields.io/static/v1?label=&message=npm&color=CB3837&style=flat-square&logo=npm)
